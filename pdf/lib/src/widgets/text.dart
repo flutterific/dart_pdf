@@ -954,7 +954,7 @@ class RichText extends Widget with SpanningWidget {
                   (style.fontSize! * textScaleFactor);
 
               if (_softWrap &&
-                  offsetX + metrics.width > constraintWidth + 0.00001) {
+                  offsetX + metrics.width >= constraintWidth - 2) {
                 if (hyphenation != null) {
                   final syllables = hyphenation!(word);
                   if (syllables.length > 1) {
@@ -966,8 +966,8 @@ class RichText extends Widget with SpanningWidget {
                                               (style.fontSize! *
                                                   textScaleFactor)) *
                                       (style.fontSize! * textScaleFactor))
-                                  .width) >
-                          constraintWidth + 0.00001) {
+                                  .width) >=
+                          constraintWidth - 2) {
                         break;
                       }
                       fits += syllable;
