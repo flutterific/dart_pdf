@@ -1003,7 +1003,7 @@ class RichText extends Widget with SpanningWidget {
                       style.height != null &&
                       style.height! > 0 &&
                       style.fontSize! >= 1) {
-                    offsetY += style.fontSize! * style.height!;
+                    offsetY += (style.fontSize! * style.height!).round().toDouble();
                   } else {
                     offsetY += bottom - top;
                   }
@@ -1085,7 +1085,7 @@ class RichText extends Widget with SpanningWidget {
                     style.height != null &&
                     style.height! > 0 &&
                     style.fontSize! >= 1) {
-                  offsetY += style.fontSize! * style.height!;
+                  offsetY += (style.fontSize! * style.height!).round().toDouble();
                 } else {
                   offsetY += bottom - top;
                 }
@@ -1148,7 +1148,7 @@ class RichText extends Widget with SpanningWidget {
                 style.height != null &&
                 style.height! > 0 &&
                 style.fontSize! >= 1) {
-              offsetY += style.fontSize! * style.height!;
+              offsetY += (style.fontSize! * style.height!).round().toDouble();
             } else {
               offsetY += bottom - top;
             }
@@ -1207,7 +1207,7 @@ class RichText extends Widget with SpanningWidget {
             style.height != null &&
             style.height! > 0 &&
             style.fontSize! >= 1) {
-          offsetY += style.fontSize! * style.height!;
+          offsetY += (style.fontSize! * style.height!).round().toDouble();
         } else {
           offsetY += bottom - top;
         }
